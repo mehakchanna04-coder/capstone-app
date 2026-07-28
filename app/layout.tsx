@@ -23,11 +23,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en">
+      <body className="antialiased">
+        <header className="border-b bg-slate-900 text-white">
+          <nav className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-2 p-4">
+            <a href="/" className="font-bold">Mehak Channa</a>
+            <a href="/work" className="text-sm hover:underline">Work</a>
+            <a href="/case-study" className="text-sm hover:underline">Case Study</a>
+            <a href="/about" className="text-sm hover:underline">About</a>
+            <a href="/contact" className="text-sm hover:underline">Contact</a>
+          </nav>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
