@@ -28,6 +28,7 @@ export default function RootLayout({
             <a href="/case-study" className="text-sm hover:text-[#E8B4BC]">Case Study</a>
             <a href="/about" className="text-sm hover:text-[#E8B4BC]">About</a>
             <a href="/contact" className="text-sm hover:text-[#E8B4BC]">Contact</a>
+            <a href="/chat" className="text-sm hover:text-[#E8B4BC]">Chat</a>
           </nav>
         </header>
         {children}
