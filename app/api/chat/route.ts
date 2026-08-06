@@ -7,11 +7,12 @@ export async function POST(req: Request) {
   console.log("CHAT BODY:", JSON.stringify(body).slice(0, 500));
 
   const messages: UIMessage[] = Array.isArray(body.messages) ? body.messages : [];
+  const modelMessages = await convertToModelMessages(messages);
 
   const result = streamText({
     model: xai(CHAT_MODEL),
     system: SYSTEM_PROMPT,
-    messages: await convertToModelMessages(messages),
+    messages: modelMessages,
   });
 
   return result.toUIMessageStreamResponse();
