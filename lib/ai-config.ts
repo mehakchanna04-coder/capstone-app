@@ -3,7 +3,7 @@
 
 // Provider: xAI Grok via the AI SDK (mentor-approved alternative to Claude).
 // The SDK abstracts the provider, so swapping to Claude later is a two-line change.
-export const CHAT_MODEL = "grok-3-mini";
+export const CHAT_MODEL = "gemini-flash-latest";
 
 // System prompt: grounds the assistant in my real, verifiable facts ONLY.
 // Plain-text output is deliberate: raw markdown renders broken mid-stream

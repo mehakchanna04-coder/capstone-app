@@ -1,5 +1,5 @@
 import { streamText, convertToModelMessages, type UIMessage } from "ai";
-import { xai } from "@ai-sdk/xai";
+import { google } from "@ai-sdk/google";
 import { CHAT_MODEL, SYSTEM_PROMPT } from "@/lib/ai-config";
 
 export async function POST(req: Request) {
@@ -10,7 +10,7 @@ export async function POST(req: Request) {
   const modelMessages = await convertToModelMessages(messages);
 
   const result = streamText({
-    model: xai(CHAT_MODEL),
+    model: google(CHAT_MODEL),
     system: SYSTEM_PROMPT,
     messages: modelMessages,
   });
